@@ -9,48 +9,51 @@ public class DebugActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle b) {
         super.onCreate(b);
-        Log.i(TAG, getClass() + ".On Create chamado" + b);
+        Log.i(TAG, getClassName() + ".On Create chamado" + b);
     }
 
     protected void onStart() {
         super.onStart();
-        Log.i(TAG, getClass() + ".On Start chamado");
+        Log.i(TAG, getClassName() + ".On Start chamado");
     }
 
     protected void onRestart() {
         super.onRestart();
-        Log.i(TAG, getClass() + ".On Restart chamado");
+        Log.i(TAG, getClassName() + ".On Restart chamado");
     }
 
     protected void onResume() {
         super.onResume();
-        Log.i(TAG, getClass() + ".On Resume chamado");
+        Log.i(TAG, getClassName() + ".On Resume chamado");
     }
 
     protected void onPause() {
         super.onPause();
-        Log.i(TAG, getClass() + ".On Pause chamado");
+        Log.i(TAG, getClassName() + ".On Pause chamado");
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.i(TAG, getClass() + ".On SaveInstanceSave() chamado");
+        Log.i(TAG, getClassName() + ".On SaveInstanceSave() chamado");
     }
 
     protected void onStop() {
         super.onStop();
-        Log.i(TAG, getClass() + ".On Stop chamado");
+        Log.i(TAG, getClassName() + ".On Stop chamado");
     }
 
     protected void onDestroy() {
         super.onDestroy();
-        Log.i(TAG, getClass() + ".On Destroy chamado");
+        Log.i(TAG, getClassName() + ".On Destroy chamado");
     }
 
     private String getClassName() {
         //Return the class name no package
         String s = getClass().getName();
-        return s.substring(s.lastIndexOf(" . "));
+        return s.substring(s.lastIndexOf("."));
     }
+
+
+
 }

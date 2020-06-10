@@ -8,7 +8,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends DebugActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button btn_login = findViewById(R.id.btn_login);
         btn_login.setOnClickListener(onClickLogin());
+
+
     }
 
     private View.OnClickListener onClickLogin() {
@@ -47,10 +50,13 @@ public class MainActivity extends AppCompatActivity {
         };
 
     }
+
     //Show message
     private void alert(String s) {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
+
+
 }
 
 
