@@ -1,5 +1,7 @@
 package com.example.eventhandling;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,6 +36,20 @@ public class MainActivity extends DebugActivity {
 
                 if (login.equals("HENRIQUE") && password.equals("123")) {
                     alert("Bem vindo, login realizado com sucesso!");
+
+                    //Create Intent
+                    Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
+                    //Bundle params = new Bundle();
+
+                    //Create key, value for another activity and send parameters
+                    //params.putString("name", login);
+                    intent.putExtra("name",login);
+
+                    //send parameters
+                    //intent.putExtras(params);
+
+                    //Start Activity
+                    startActivity(intent);
 
                 } else {
                     if (login.equals("") && password.equals("")) {

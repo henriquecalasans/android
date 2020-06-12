@@ -2,6 +2,7 @@ package com.example.eventhandling;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -13,17 +14,20 @@ public class WelcomeActivity extends DebugActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        //Receive name sent by parameter
-        Bundle args = getIntent().getExtras();
+        //Get intent
+        Intent intent = getIntent();
 
-        //Defined key
+        //Read parameters
+        Bundle args = intent.getExtras();
+
+        //Recieve Bundle key
         String name = args.getString("name");
 
         //Update view with Welcome message text
         TextView tw = findViewById(R.id.tw_welcome);
-        tw.setText(name + R.string.welcome);
+        String welcome = getString(R.string.welcome);
+        tw.setText(welcome + ", " + name);
     }
-
 
 
 }
