@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_bar_spinner"
+        android:id="@+id/button1"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Spinner"
+        android:title="@string/title_button1"
         app:showAsAction="always" />
 </menu>

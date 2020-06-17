@@ -4,4 +4,7 @@
     <string name="password">Senha</string>
     <string name="login">Login</string>
     <string name="welcome">Seja Bem vindo</string>
+    <string name="spinner">Spinner</string>
+    <string name="action_bar_button1">Botão funcionando!!</string>
+    <string name="title_button1">Button 1</string>
 </resources>

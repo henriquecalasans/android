@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Objects;
 
@@ -39,19 +40,35 @@ public class WelcomeActivity extends DebugActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
+    //Create action bar and inflate menu xml
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    //Enable button up navigation
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
         if (id == android.R.id.home) {
             finish();
+
+            //Enable function button 1 from action bar
+
+        } else if (id == R.id.button1) {
+            String button1_msg = getString(R.string.action_bar_button1);
+            toast(button1_msg);
+
         }
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
+
+    //Create message
+    private void toast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }
