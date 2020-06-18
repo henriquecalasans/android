@@ -5,6 +5,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -19,6 +21,9 @@ public class WelcomeActivity extends DebugActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+
+        //Create object to Actionbar Class
+        ActionBar actionBar = getSupportActionBar();
 
         //Get intent
         Intent intent = getIntent();
@@ -35,9 +40,15 @@ public class WelcomeActivity extends DebugActivity {
         tw.setText(welcome + ", " + name);
 
 
-        //Enable action bar
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //Enable action bar to function up navigation
+       // actionBar.setDisplayHomeAsUpEnabled(true);
+
+        //Remove title
+       // actionBar.setDisplayShowTitleEnabled(false);
+
+
+
+        //
     }
 
     //Create action bar and inflate menu xml
@@ -57,7 +68,6 @@ public class WelcomeActivity extends DebugActivity {
             finish();
 
             //Enable function button 1 from action bar
-
         } else if (id == R.id.button1) {
             String button1_msg = getString(R.string.action_bar_button1);
             toast(button1_msg);
