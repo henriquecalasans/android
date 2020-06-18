@@ -22,7 +22,11 @@ public class WelcomeActivity extends DebugActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        //Create object to Actionbar Class
+        //Create Toolbar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        //Create object to ActionBar Class
         ActionBar actionBar = getSupportActionBar();
 
         //Get intent
@@ -41,11 +45,10 @@ public class WelcomeActivity extends DebugActivity {
 
 
         //Enable action bar to function up navigation
-       // actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         //Remove title
-       // actionBar.setDisplayShowTitleEnabled(false);
-
+        actionBar.setDisplayShowTitleEnabled(false);
 
 
         //
