@@ -7,4 +7,10 @@
     <string name="spinner">Spinner</string>
     <string name="action_bar_button1">Botão funcionando!!</string>
     <string name="title_button1">Button 1</string>
+    <string name="name">Nome</string>
+    <string name="email">Email</string>
+    <string name="sent">Enviar</string>
+    <string name="email_value">Digite seu e-mail</string>
+    <string name="observation">Observarções:</string>
+    <string name="observation_title">Observação</string>
 </resources>

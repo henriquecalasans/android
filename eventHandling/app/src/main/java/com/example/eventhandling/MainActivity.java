@@ -43,7 +43,7 @@ public class MainActivity extends DebugActivity {
 
                     //Create key, value for another activity and send parameters
                     //params.putString("name", login);
-                    intent.putExtra("name",login);
+                    intent.putExtra("name", login);
 
                     //send parameters
                     //intent.putExtras(params);
@@ -65,6 +65,12 @@ public class MainActivity extends DebugActivity {
 
         };
 
+    }
+
+    public void callObservationScreen(View view) {
+        Intent intent = new Intent(getApplicationContext(), ObservationScreenActivity.class);
+        startActivity(intent);
+        alert("Tela de Observação chamada");
     }
 
     //Show message
