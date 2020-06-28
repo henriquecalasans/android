@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:stretchColumns="1">
+
+    <TableRow>
+
+        <TextView
+            android:padding="3dp"
+            android:text="Usuário" />
+
+        <EditText
+            android:id="@+id/et_login_table_latout"
+            android:inputType="text"
+            android:padding="3dp" />
+
+    </TableRow>
+
+
+    <TableRow>
+
+        <TextView
+            android:padding="3dp"
+            android:text="Senha: " />
+
+        <EditText
+            android:id="@+id/et_password_table_latout"
+            android:inputType="textPassword"
+            android:padding="3dp" />
+    </TableRow>
+
+    <TableRow>
+
+
+        <Button
+            android:id="@+id/btnc_login_table_layout"
+            android:gravity="center"
+            android:text="Login" />
+    </TableRow>
+
+</android.widget.TableLayout>

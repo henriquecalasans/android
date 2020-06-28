@@ -73,6 +73,12 @@ public class MainActivity extends DebugActivity {
         alert("Tela de Observação chamada");
     }
 
+    public void callFrameLayoutScreen(View view) {
+        Intent intent = new Intent(getApplicationContext(), FrameLayout.class);
+        startActivity(intent);
+        alert("Tela de Frame layout chamada");
+    }
+
     //Show message
     private void alert(String s) {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#8B8B83"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tw_login"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:text="@string/login" />
+
+    <EditText
+        android:id="@+id/et_login_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tw_login"
+        android:background="@android:drawable/editbox_background" />
+
+    <TextView
+        android:id="@+id/tw_password"
+        android:layout_width="55dp"
+        android:layout_below="@id/et_login_relative_layout"
+        android:gravity="left"
+        android:layout_height="wrap_content"
+        android:text="@string/password" />
+
+    <EditText
+        android:id="@+id/et_password_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tw_password"
+        android:layout_alignTop="@id/tw_password"
+        android:inputType="textPassword"
+        android:background="@android:drawable/editbox_background" />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:text="@string/login"
+        android:layout_below="@id/et_password_relative_layout"
+        />
+
+
+
+</android.widget.RelativeLayout>

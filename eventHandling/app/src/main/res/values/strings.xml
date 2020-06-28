@@ -13,4 +13,6 @@
     <string name="email_value">Digite seu e-mail</string>
     <string name="observation">Observarções:</string>
     <string name="observation_title">Observação</string>
+    <string name="frame_layout_title">Frame layout</string>
+    <string name="btn_cancel">Cancelar</string>
 </resources>
