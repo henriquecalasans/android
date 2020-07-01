@@ -85,6 +85,10 @@ public class MainActivity extends DebugActivity {
     }
 
 
+    public void callHelloFragmentsScreen(View view) {
+        Intent intent = new Intent(getApplicationContext(), HelloFragments.class);
+        startActivity(intent);
+    }
 }
 
 
